@@ -3,6 +3,7 @@ package compulsory.catalogue;
 import compulsory.items.Item;
 import lombok.Data;
 
+import java.awt.*;
 import java.io.*;
 import java.util.LinkedList;
 import java.util.List;
@@ -18,13 +19,20 @@ class Catalog implements Serializable {
         this.path = path;
     }
 
-    public void add(Item item) {
+    public void add(Item item) throws IOException {
         items.add(item);
+        File file = new File(item.getPath());
+        if (!file.exists())
+            if (file.createNewFile())
+                System.out.println("File " + item.getName() + " created successfully at path " + item.getPath());
+            else
+                System.err.println("Failed to create file " + item.getName() + " at path " + item.getPath());
+
     }
 
-    public Item findById(String id) {
+    public Item findById(int id) {
         for (Item item : items) {
-            if (item.getId().equals(id))
+            if (item.getId().equals(Integer.toString(id)))
                 return item;
         }
         return null;
@@ -50,5 +58,13 @@ class Catalog implements Serializable {
         this.name = copy.getName();
         this.path = copy.getPath();
         this.items = copy.getItems();
+    }
+
+    public void play(int index) throws IOException {
+        if (index < 0 || index > items.size()) {
+            System.err.println("Index invalid.");
+            System.exit(-1);
+        }
+        Desktop.getDesktop().open(new File(items.get(index).getPath()));
     }
 }
