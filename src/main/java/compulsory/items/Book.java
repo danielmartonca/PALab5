@@ -6,21 +6,21 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 public
-class Song extends Item {
+class Book extends Item {
     @Getter
     private final List<String> authors;
     @Getter
-    private final String songName;
+    private final String bookName;
 
-    public Song(String name, String path, String songName, String... authors) throws IOException, FailedToCreateFileException, InvalidPathFormat {
+    public Book(String name, String path, String bookName, String... authors) throws IOException, FailedToCreateFileException, InvalidPathFormat {
         super(name, path);
-        this.authors = new LinkedList<>(Arrays.asList(authors));
-        this.songName = songName;
+        this.authors = new ArrayList<>(Arrays.asList(authors));
+        this.bookName = bookName;
     }
 }
