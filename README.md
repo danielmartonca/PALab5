@@ -119,15 +119,27 @@ You're good to go! Now you should be able to see in the console what the other m
 
 The task consists of:<br />
 
-- [X]
-- [X] 
-- [X] 
-- [X] 
-- [X] 
+- [X] Create an object-oriented model of the problem. You should have at least the following classes: Catalog and two item classes at your choice. Consider using an interface or an abstract class in order to describe the items in a catalog.
+- [X] Implement the following methods representing commands that will manage the content of the catalog:
+- [X] add: adds a new entry into the catalog;
+- [X] list: prints the content of the catalog on the screen;
+- [X] play: playback using the native operating system application (see the Desktop class);
+- [X] save: saves the catalog to an external file (either as a text or binary, using object serialization);
+- [X] load: loads the catalog from an external file.
+- [X] The application will signal invalid data (year, path, etc.) using a custom exception.
 
 Here is the output I received:<br />
 
 ```dif
+Item{id='3f4a44e5-1c39-4814-8ad5-9d8c96bdc597', name='DorianPopa_HatzJhonule', path='E:\Info\FACULTATE\ANUL_2\SEM 2\PA\LABORATOARE\PALab5\items\DorianPopa_HatzJhonule.mp3', itemSize=0}
+Item{id='d534057e-63ff-4d54-b411-065f38168081', name='AlPacino', path='E:\Info\FACULTATE\ANUL_2\SEM 2\PA\LABORATOARE\PALab5\items\AlPacino.mkv', itemSize=0}
+Item{id='e71eee10-03f4-497a-b9de-fa9248ac0c6f', name='Book1', path='E:\Info\FACULTATE\ANUL_2\SEM 2\PA\LABORATOARE\PALab5\items\book1.DOCX', itemSize=0}
+Item{id='365444d7-1925-4cc4-8ee2-161af339caff', name='Img1', path='E:\Info\FACULTATE\ANUL_2\SEM 2\PA\LABORATOARE\PALab5\items\sarpe.jpg', itemSize=0}
+Item{id='3f4a44e5-1c39-4814-8ad5-9d8c96bdc597', name='DorianPopa_HatzJhonule', path='E:\Info\FACULTATE\ANUL_2\SEM 2\PA\LABORATOARE\PALab5\items\DorianPopa_HatzJhonule.mp3', itemSize=0}
+Item{id='d534057e-63ff-4d54-b411-065f38168081', name='AlPacino', path='E:\Info\FACULTATE\ANUL_2\SEM 2\PA\LABORATOARE\PALab5\items\AlPacino.mkv', itemSize=0}
+Item{id='e71eee10-03f4-497a-b9de-fa9248ac0c6f', name='Book1', path='E:\Info\FACULTATE\ANUL_2\SEM 2\PA\LABORATOARE\PALab5\items\book1.DOCX', itemSize=0}
+Item{id='365444d7-1925-4cc4-8ee2-161af339caff', name='Img1', path='E:\Info\FACULTATE\ANUL_2\SEM 2\PA\LABORATOARE\PALab5\items\sarpe.jpg', itemSize=0}
+20:04:38.512 [main] INFO  compulsory.MainCompulsory - Program executed successfully.
 ```
 
 ## Optional
